@@ -11,7 +11,47 @@
 </head>
 
 <body>
-  <section class="hero-section">
+
+  <header id="mainHeader" class="main-header">
+    <nav class="navbar">
+      <div class="navbar-container">
+        <div class="navbar-logo">
+          <img src="images/logo.png" alt="Ohmia Logo" class="logo-icon">
+          <span class="logo-text">Ohmia</span>
+        </div>
+
+        <ul class="navbar-menu">
+          <li class="menu-item">
+            <a href="#home" class="menu-link">Inicio</a>
+          </li>
+          <li class="menu-item">
+            <a href="#benefitsSection" class="menu-link">Características</a>
+          </li>
+          <li class="menu-item">
+            <a href="#pricing-section" class="menu-link">Planes</a>
+          </li>
+          <li class="menu-item">
+            <a href="#download" class="menu-link">Descargar</a>
+          </li>
+        </ul>
+
+        <!-- Action Buttons -->
+        <div class="navbar-actions">
+          <a href="#login" class="action-button action-button--login">Iniciar Sesión</a>
+          <a href="#register" class="action-button action-button--register">Regístrate</a>
+        </div>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero-section" id="home">
     <div class="hero-container">
       <div class="hero-content">
         <h1 class="hero-title">Gestiona tu Consumo Energético con Ohmia</h1>
