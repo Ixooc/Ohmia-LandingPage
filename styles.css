@@ -820,3 +820,143 @@ body {
         font-size: 16px;
     }
 }
+
+.register-section {
+    background-color: #d4ebe8;
+    padding: 80px 20px;
+}
+
+.register-container {
+    align-items: center;
+    display: flex;
+    gap: 60px;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.register-content {
+    flex: 1;
+    max-width: 500px;
+}
+
+.register-title {
+    color: #000000;
+    font-family: 'Inter', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.register-description {
+    color: #000000;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.register-form-container {
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    max-width: 450px;
+    padding: 40px 35px;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-label {
+    color: #000000;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.form-input {
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    color: #000000;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    padding: 12px 16px;
+    transition: border-color 0.3s ease;
+}
+
+.form-input:focus {
+    border-color: #279785;
+    outline: none;
+}
+
+.form-submit-button {
+    background-color: #279785;
+    border: none;
+    border-radius: 8px;
+    color: #ffffff;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 14px 24px;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.form-submit-button:hover {
+    background-color: #248C85;
+}
+
+.form-submit-button:focus {
+    outline: 2px solid #279785;
+    outline-offset: 2px;
+}
+
+@media (max-width: 768px) {
+    .register-section {
+        padding: 60px 20px;
+    }
+
+    .register-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .register-content {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .register-title {
+        font-size: 28px;
+    }
+
+    .register-description {
+        font-size: 16px;
+    }
+
+    .register-form-container {
+        max-width: 100%;
+        padding: 30px 25px;
+    }
+
+    .form-input {
+        font-size: 16px;
+    }
+
+    .form-submit-button {
+        font-size: 16px;
+        padding: 12px 20px;
+    }
+}
