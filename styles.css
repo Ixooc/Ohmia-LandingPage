@@ -900,6 +900,34 @@ body {
     outline: none;
 }
 
+.form-group--checkbox {
+    align-items: flex-start;
+    flex-direction: row;
+    gap: 12px;
+}
+
+.form-checkbox {
+    accent-color: #279785;
+    cursor: pointer;
+    flex-shrink: 0;
+    height: 18px;
+    margin-top: 2px;
+    width: 18px;
+}
+
+.form-checkbox-label {
+    color: #424242;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.form-checkbox:checked {
+    background-color: #279785;
+}
+
 .form-submit-button {
     background-color: #279785;
     border: none;
@@ -955,6 +983,10 @@ body {
         font-size: 16px;
     }
 
+    .form-checkbox-label {
+        font-size: 13px;
+    }
+    
     .form-submit-button {
         font-size: 16px;
         padding: 12px 20px;
