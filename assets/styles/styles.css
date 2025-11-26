@@ -1585,3 +1585,145 @@ body {
         margin-top: 30px;
     }
 }
+
+.register-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 100px 20px 50px; 
+    background-color: #f7f7f7;
+}
+
+.register-form-container-page {
+    width: 100%;
+    max-width: 500px;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.register-form-title {
+    font-size: 32px;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.register-form-subtitle {
+    font-size: 18px;
+    color: var(--text-secondary);
+    margin-bottom: 30px;
+}
+
+.registration-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    text-align: left;
+}
+
+.form-label {
+    display: block;
+    font-size: 18px;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.form-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 18px;
+    color: var(--text-primary);
+    background-color: var(--white);
+    transition: border-color 0.3s ease;
+}
+
+.form-input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 137, 123, 0.1); 
+}
+
+.form-group--checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.form-checkbox {
+    margin-top: 4px;
+    min-width: 16px; 
+    min-height: 16px;
+}
+
+.form-checkbox-label {
+    font-size: 18px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+.policy-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.policy-link:hover {
+    text-decoration: underline;
+}
+
+.form-submit-button.register-button {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 14px 25px;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.form-submit-button.register-button:hover {
+    background-color: var(--primary-dark);
+}
+
+.login-prompt {
+    font-size: 18px;
+    color: var(--text-secondary);
+    margin-top: 25px;
+}
+
+.error-message {
+    color: #d32f2f;
+    font-size: 12px;
+    margin-top: 5px;
+    text-align: left;
+    height: 18px; 
+}
+
+@media (max-width: 600px) {
+    .register-form-section {
+        padding: 30px 20px;
+        margin: 0 15px;
+    }
+
+    .register-form-title {
+        font-size: 30px;
+    }
+
+    .form-submit-button.register-button {
+        font-size: 17px;
+        padding: 12px 20px;
+    }
+}
