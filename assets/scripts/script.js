@@ -108,3 +108,54 @@ if (track && btnPrev && btnNext) {
     updateSlider();
   });
 }
+
+const hiwTrack = document.getElementById('howItWorksTrack');
+const hiwBtnPrev = document.getElementById('howItWorksPrev');
+const hiwBtnNext = document.getElementById('howItWorksNext');
+
+if (hiwTrack && hiwBtnPrev && hiwBtnNext) {
+    let hiwCurrentIndex = 0;
+
+    const updateHiwSlider = () => {
+        const slide = hiwTrack.querySelector('.how-it-works-slide');
+        if (!slide) return;
+
+        const slideWidth = slide.offsetWidth;
+        const gap = 20;
+        const moveAmount = slideWidth + gap;
+
+        hiwTrack.style.transform = `translateX(-${hiwCurrentIndex * moveAmount}px)`;
+    };
+
+    const getHiwVisibleCards = () => {
+        return 1;
+    };
+
+    hiwBtnNext.addEventListener('click', () => {
+        const totalSlides = hiwTrack.children.length;
+        const visibleSlides = getHiwVisibleCards();
+
+        if (hiwCurrentIndex < totalSlides - visibleSlides) {
+            hiwCurrentIndex++;
+        } else {
+            hiwCurrentIndex = 0;
+        }
+        updateHiwSlider();
+    });
+
+    hiwBtnPrev.addEventListener('click', () => {
+        const totalSlides = hiwTrack.children.length;
+        const visibleSlides = getHiwVisibleCards();
+
+        if (hiwCurrentIndex > 0) {
+            hiwCurrentIndex--;
+        } else {
+            hiwCurrentIndex = totalSlides - visibleSlides;
+        }
+        updateHiwSlider();
+    });
+
+    window.addEventListener('resize', () => {
+        updateHiwSlider();
+    });
+}
