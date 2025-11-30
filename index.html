@@ -8,7 +8,7 @@
   <title>Ohmia - Gestión de Consumo Energético</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/styles/styles.css">
-  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="icon" type="image/ico" href="assets/images/favicon.ico">
 </head>
 
 <body>
@@ -37,8 +37,7 @@
         </ul>
 
         <div class="navbar-actions">
-          <a href="#login" class="action-button action-button--login">Iniciar Sesión</a>
-          <a href="#register" class="action-button action-button--register">Regístrate</a>
+          <a href="register.html" class="action-button action-button--register">Regístrate</a>
         </div>
 
         <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
@@ -64,12 +63,8 @@
         </p>
 
         <div class="hero-buttons">
-          <a href="#" class="download-button download-button--ios" aria-label="app-store">
-            <span class="button-text">Descargar para App Store</span>
-          </a>
-
-          <a href="#" class="download-button download-button--android" aria-label="google-play">
-            <span class="button-text">Descargar para Google Play</span>
+          <a href="register.html" class="download-button download-button--register" aria-label="Regístrate ahora">
+            <span class="button-text">Regístrate ahora</span>
           </a>
         </div>
       </div>
@@ -124,57 +119,196 @@
     </div>
   </section>
 
-  <section class="features-section">
+  <section class="features-section" id="howItWorksSection">
     <h2 class="features-title">Así funciona Ohmia</h2>
 
-    <div class="features-container">
-      <div class="features-image features-image--left">
-        <img src="assets/images/ohmia-devices.png" alt="ohmia-devices" class="app-screenshot">
+    <div class="slider-wrapper how-it-works-wrapper">
+      <button class="slider-button slider-button--prev" id="howItWorksPrev" aria-label="Paso anterior">
+        &#10094;
+      </button>
+
+      <div class="slider-viewport">
+        <div class="slider-track" id="howItWorksTrack">
+
+          <article class="how-it-works-slide">
+            <div class="slide-image-container">
+              <img src="assets/images/ohmia-devices.png" alt="Configura tus equipos" class="app-screenshot">
+            </div>
+            <div class="slide-content">
+              <h3 class="features-heading">1. Configura tus Equipos</h3>
+              <p class="features-item">
+                Registra tus dispositivos (refrigeradora, TV, aire acondicionado, etc.) para que Ohmia pueda empezar a
+                monitorear su consumo en tiempo real.
+              </p>
+            </div>
+          </article>
+
+          <article class="how-it-works-slide">
+            <div class="slide-image-container">
+              <img src="assets/images/ohmia-home.png" alt="Monitoreo detallado" class="app-screenshot">
+            </div>
+            <div class="slide-content">
+              <h3 class="features-heading">2. Monitoreo Detallado</h3>
+              <p class="features-item">
+                Visualiza tu consumo eléctrico en el panel principal con gráficos claros. Compara tu consumo diario,
+                semanal o mensual.
+              </p>
+            </div>
+          </article>
+
+          <article class="how-it-works-slide">
+            <div class="slide-image-container">
+              <img src="assets/images/ohmia-insight.png" alt="Alertas y consejos" class="app-screenshot">
+            </div>
+            <div class="slide-content">
+              <h3 class="features-heading">3. Alertas y Consejos</h3>
+              <p class="features-item">
+                Recibe alertas si un equipo gasta de más. Ohmia te da consejos personalizados y te muestra qué equipos
+                gastan más, cuándo y cómo ahorrar.
+              </p>
+            </div>
+          </article>
+
+          <article class="how-it-works-slide">
+            <div class="slide-image-container">
+              <img src="assets/images/ohmia-graphic.png" alt="Reportes avanzados" class="app-screenshot">
+            </div>
+            <div class="slide-content">
+              <h3 class="features-heading">4. Reportes Avanzados</h3>
+              <p class="features-item">
+                Activa Ohmia Pro para obtener reportes avanzados y detallados sobre el uso histórico de tu energía,
+                maximizando tu ahorro.
+              </p>
+            </div>
+          </article>
+
+        </div>
       </div>
 
-      <div class="features-content">
-        <h3 class="features-heading">¡Control total en tu mano!</h3>
-        <ul class="features-list">
-          <li class="features-item">Registra tus dispositivos, recibe consejos personalizados y monitorea el consumo en
-            tiempo real.</li>
-          <li class="features-item">Ohmia te muestra qué equipos gastan más, cuándo y cómo ahorrar — todo desde tu
-            celular.</li>
-        </ul>
-      </div>
-
-      <div class="features-image features-image--right">
-        <img src="assets/images/ohmia-insight.png" alt="ohmia-insights" class="app-screenshot">
-      </div>
+      <button class="slider-button slider-button--next" id="howItWorksNext" aria-label="Siguiente paso">
+        &#10095;
+      </button>
     </div>
   </section>
 
-  <section class="app-showcase-section">
-    <div class="app-showcase-container">
-      <div class="app-showcase-image-left">
-        <img src="assets/images/ohmia-home.png" alt="ohmia-principal-screen" class="app-screen">
+  <section class="video-demo-section">
+    <div class="video-demo-container">
+
+      <div class="video-header">
+        <h2 class="video-title">Tan simple como parece. Mira a Ohmia en acción.</h2>
+        <p class="video-description">
+          Olvídate de manuales complicados o instalaciones técnicas. En solo unos minutos, verás cómo tomar el control
+          total de tu energía. Es intuitivo, es rápido y está diseñado para que empieces a ahorrar desde el primer día.
+          Sin barreras.
+        </p>
       </div>
 
-      <div class="app-showcase-content">
-        <div class="showcase-feature-box">
-          <p class="feature-text">Agrega dispositivos como refrigeradora, TV o aire acondicionado.</p>
-        </div>
-
-        <div class="showcase-feature-box">
-          <p class="feature-text">Compara tu consumo diario, semanal o mensual.</p>
-        </div>
-
-        <div class="showcase-feature-box">
-          <p class="feature-text">Recibe alertas si algo consume de más.</p>
-        </div>
-
-        <div class="showcase-feature-box">
-          <p class="feature-text">Activa Ohmia Pro para objetivos de ahorro y reportes avanzados.</p>
-        </div>
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/gvp27nwosQ4?rel=0&modestbranding=1" title="Demostración de Ohmia"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
       </div>
 
-      <div class="app-showcase-image-right">
-        <img src="assets/images/ohmia-graphic.png" alt="ohmia-graphic" class="app-screen">
+    </div>
+  </section>
+
+    <section id="testimonialsSection" class="testimonials-section">
+    <div class="testimonials-container">
+      <h2 class="testimonials-title">Lo que dicen nuestros usuarios</h2>
+
+      <div class="slider-wrapper">
+        <button class="slider-button slider-button--prev" aria-label="Previous testimonial">
+          &#10094;
+        </button>
+
+        <div class="slider-viewport">
+          <div class="slider-track" id="testimonialTrack">
+
+            <article class="testimonial-card">
+              <div class="testimonial-header">
+                <div class="testimonial-avatar-container">
+                  <img src="assets/images/avatar-female-2.png" alt="Keiko" class="testimonial-avatar">
+                </div>
+                <div class="testimonial-info">
+                  <h4 class="testimonial-name">Keiko</h4>
+                </div>
+              </div>
+              <p class="testimonial-text">
+                "Me permite saber cuánto más consume la cocina que el salón. Me ayuda a reducir y saber qué tan rentable
+                es lo que tengo."
+              </p>
+            </article>
+
+            <article class="testimonial-card">
+              <div class="testimonial-header">
+                <div class="testimonial-avatar-container">
+                  <img src="assets/images/avatar-male-2.png" alt="Valentín de la Cruz" class="testimonial-avatar">
+                </div>
+                <div class="testimonial-info">
+                  <h4 class="testimonial-name">Valentín de la Cruz</h4>
+                </div>
+              </div>
+              <p class="testimonial-text">
+                "Puedo medir con qué dispositivo estoy consumiendo más energía. Así puedo prevenir y no tener que pagar
+                tanto a fin de mes."
+              </p>
+            </article>
+
+            <article class="testimonial-card">
+              <div class="testimonial-header">
+                <div class="testimonial-avatar-container">
+                  <img src="assets/images/avatar-male-1.png" alt="Lionel Mendoza" class="testimonial-avatar">
+                </div>
+                <div class="testimonial-info">
+                  <h4 class="testimonial-name">Lionel Mendoza</h4>
+                </div>
+              </div>
+              <p class="testimonial-text">
+                "Puedo ver los dispositivos para interactuar con ellos, ver cuánto consumo eléctrico gastan y así tener
+                una mejor gestión de mis finanzas."
+              </p>
+            </article>
+
+            <article class="testimonial-card">
+              <div class="testimonial-header">
+                <div class="testimonial-avatar-container">
+                  <img src="assets/images/avatar-male-3.png" alt="Oscar Vasquez" class="testimonial-avatar">
+                </div>
+                <div class="testimonial-info">
+                  <h4 class="testimonial-name">Oscar Vasquez</h4>
+                </div>
+              </div>
+              <p class="testimonial-text">
+                "La aplicación te avisa dónde estás consumiendo más o menos y eso redunda en que vas a optimizar tu
+                consumo de energía."
+              </p>
+            </article>
+
+            <article class="testimonial-card">
+              <div class="testimonial-header">
+                <div class="testimonial-avatar-container">
+                  <img src="assets/images/avatar-female-1.png" alt="Esther Llave" class="testimonial-avatar">
+                </div>
+                <div class="testimonial-info">
+                  <h4 class="testimonial-name">Esther Llave</h4>
+                </div>
+              </div>
+              <p class="testimonial-text">
+                "Me ayuda a dar una mejor lectura del consumo, saber cuál artefacto está gastando mayor energía y dónde
+                podría enfocarme para reducir costos."
+              </p>
+            </article>
+
+          </div>
+        </div>
+
+        <button class="slider-button slider-button--next" aria-label="Next testimonial">
+          &#10095;
+        </button>
       </div>
+
     </div>
   </section>
 
@@ -375,8 +509,10 @@
       </div>
 
       <div class="footer-center">
-        <a href="#" class="footer-link">Política de privacidad</a>
-        <p class="copyright-text">© 2025 EfiTech</p>
+        <a href="privacy.html" class="footer-link">Política de privacidad</a>
+        <a href="https://cdn.www.gob.pe/uploads/document/file/272360/Ley%20N%C2%BA%2029733.pdf.pdf?v=1618338779"
+          class="footer-link" target="_blank" rel="noopener noreferrer">Ley de Protección de Datos Personales</a>
+        <p class="copyright-text">© 2025 EfiTech. Todos los derechos reservados.</p>
       </div>
 
       <div class="footer-spacer"></div>
