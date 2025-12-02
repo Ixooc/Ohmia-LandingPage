@@ -49,26 +49,24 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 const track = document.getElementById('testimonialTrack');
-const btnPrev = document.querySelector('.slider-button--prev');
-const btnNext = document.querySelector('.slider-button--next');
+// CORRECCIÓN AQUÍ: Seleccionamos los botones específicamente usando sus nuevos IDs únicos
+const btnPrev = document.getElementById('testimonialPrev');
+const btnNext = document.getElementById('testimonialNext');
 
 if (track && btnPrev && btnNext) {
   let currentIndex = 0;
-  
+
   const updateSlider = () => {
-    //Ancho de tarjeta y gap
     const card = track.querySelector('.testimonial-card');
     if (!card) return;
-    
-    //Asegura el ancho real con los margenes
+
     const slideWidth = card.getBoundingClientRect().width;
-    const gap = 20; 
+    const gap = 20;
     const moveAmount = slideWidth + gap;
-    
+
     track.style.transform = `translateX(-${currentIndex * moveAmount}px)`;
   };
 
-  //Cantidad de cartas en la pantalla
   const getVisibleCards = () => {
     if (window.innerWidth <= 768) return 1;
     if (window.innerWidth <= 1024) return 2;
@@ -78,13 +76,11 @@ if (track && btnPrev && btnNext) {
   btnNext.addEventListener('click', () => {
     const totalCards = track.children.length;
     const visibleCards = getVisibleCards();
-    
-   //Ya no avanza si muestra las ultimas cartas
+
     if (currentIndex < totalCards - visibleCards) {
       currentIndex++;
       updateSlider();
     } else {
-      //Vuelve al inicio
       currentIndex = 0;
       updateSlider();
     }
@@ -95,7 +91,6 @@ if (track && btnPrev && btnNext) {
       currentIndex--;
       updateSlider();
     } else {
-      //Va a la ultima carta
       const totalCards = track.children.length;
       const visibleCards = getVisibleCards();
       currentIndex = totalCards - visibleCards;
@@ -103,7 +98,6 @@ if (track && btnPrev && btnNext) {
     }
   });
 
-  //Recalcula la posicion al cambiar el tamaño de la ventana
   window.addEventListener('resize', () => {
     updateSlider();
   });
@@ -114,48 +108,48 @@ const hiwBtnPrev = document.getElementById('howItWorksPrev');
 const hiwBtnNext = document.getElementById('howItWorksNext');
 
 if (hiwTrack && hiwBtnPrev && hiwBtnNext) {
-    let hiwCurrentIndex = 0;
+  let hiwCurrentIndex = 0;
 
-    const updateHiwSlider = () => {
-        const slide = hiwTrack.querySelector('.how-it-works-slide');
-        if (!slide) return;
+  const updateHiwSlider = () => {
+    const slide = hiwTrack.querySelector('.how-it-works-slide');
+    if (!slide) return;
 
-        const slideWidth = slide.offsetWidth;
-        const gap = 20;
-        const moveAmount = slideWidth + gap;
+    const slideWidth = slide.offsetWidth;
+    const gap = 20;
+    const moveAmount = slideWidth + gap;
 
-        hiwTrack.style.transform = `translateX(-${hiwCurrentIndex * moveAmount}px)`;
-    };
+    hiwTrack.style.transform = `translateX(-${hiwCurrentIndex * moveAmount}px)`;
+  };
 
-    const getHiwVisibleCards = () => {
-        return 1;
-    };
+  const getHiwVisibleCards = () => {
+    return 1;
+  };
 
-    hiwBtnNext.addEventListener('click', () => {
-        const totalSlides = hiwTrack.children.length;
-        const visibleSlides = getHiwVisibleCards();
+  hiwBtnNext.addEventListener('click', () => {
+    const totalSlides = hiwTrack.children.length;
+    const visibleSlides = getHiwVisibleCards();
 
-        if (hiwCurrentIndex < totalSlides - visibleSlides) {
-            hiwCurrentIndex++;
-        } else {
-            hiwCurrentIndex = 0;
-        }
-        updateHiwSlider();
-    });
+    if (hiwCurrentIndex < totalSlides - visibleSlides) {
+      hiwCurrentIndex++;
+    } else {
+      hiwCurrentIndex = 0;
+    }
+    updateHiwSlider();
+  });
 
-    hiwBtnPrev.addEventListener('click', () => {
-        const totalSlides = hiwTrack.children.length;
-        const visibleSlides = getHiwVisibleCards();
+  hiwBtnPrev.addEventListener('click', () => {
+    const totalSlides = hiwTrack.children.length;
+    const visibleSlides = getHiwVisibleCards();
 
-        if (hiwCurrentIndex > 0) {
-            hiwCurrentIndex--;
-        } else {
-            hiwCurrentIndex = totalSlides - visibleSlides;
-        }
-        updateHiwSlider();
-    });
+    if (hiwCurrentIndex > 0) {
+      hiwCurrentIndex--;
+    } else {
+      hiwCurrentIndex = totalSlides - visibleSlides;
+    }
+    updateHiwSlider();
+  });
 
-    window.addEventListener('resize', () => {
-        updateHiwSlider();
-    });
+  window.addEventListener('resize', () => {
+    updateHiwSlider();
+  });
 }
